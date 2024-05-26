@@ -6,8 +6,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Yumm</h1>
         <p>
-          Edit <code>src/App.js</code>Tasty Delights, a click away.
+          Tasty Delights, a click away.
         </p>
         <a
           className="App-link"
@@ -23,3 +24,4 @@ function App() {
 }
 
 export default App;
+
