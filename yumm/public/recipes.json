@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "title": "Spaghetti Bolognese",
+      "description": "A classic Italian pasta dish..."
+    },
+    {
+      "id": 2,
+      "title": "Chicken Curry",
+      "description": "A spicy and flavorful dish..."
+    },
+    {
+      "id": 3,
+      "title": "Vegetable Stir Fry",
+      "description": "A healthy and quick stir-fried vegetable dish..."
+    },
+    {
+      "id": 4,
+      "title": "Beef Tacos",
+      "description": "Delicious Mexican tacos with seasoned beef and toppings..."
+    },
+    {
+      "id": 5,
+      "title": "Margherita Pizza",
+      "description": "A classic pizza topped with fresh tomatoes, mozzarella, and basil..."
+    }
+  ]
+  

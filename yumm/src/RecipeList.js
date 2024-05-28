@@ -30,7 +30,7 @@ class RecipeList extends Component {
   }
 
   componentDidMount() {
-    axios.get('path/to/your/recipes.json')
+    axios.get('alx-port/yumm/public/recipes.json')
       .then(response => this.setState({ recipes: response.data }))
       .catch(error => console.error('Error fetching data:', error));
   }
