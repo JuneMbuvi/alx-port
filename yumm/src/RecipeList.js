@@ -6,6 +6,9 @@ import RecipeCard from './RecipeCard';
 const styles = StyleSheet.create({
   container: {
     padding: '20px',
+    display: 'grid',
+    gridTemplateRows: 'repeat(autofill, minmax(300px, 1fr))',
+    gap: '20px',
   },
 });
 
