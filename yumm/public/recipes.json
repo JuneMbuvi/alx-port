@@ -3,27 +3,31 @@
       "id": 1,
       "title": "Spaghetti Bolognese",
       "description": "A classic Italian pasta dish...",
-      "image": "https://www.kitchensanctuary.com/spaghetti-bolognese/"
+      "image": "images/spaghetti-bolognese.webp"
     },
     {
       "id": 2,
       "title": "Chicken Curry",
-      "description": "A spicy and flavorful dish..."
+      "description": "A spicy and flavorful dish...",
+      "image": "images/chicken-curry.webp"
     },
     {
       "id": 3,
       "title": "Vegetable Stir Fry",
-      "description": "A healthy and quick stir-fried vegetable dish..."
+      "description": "A healthy and quick stir-fried vegetable dish...",
+      "image": "images/vegetable-stir-fry.webp"
     },
     {
       "id": 4,
       "title": "Beef Tacos",
-      "description": "Delicious Mexican tacos with seasoned beef and toppings..."
+      "description": "Delicious Mexican tacos with seasoned beef and toppings...",
+      "image": "images/beef-tacos.webp"
     },
     {
       "id": 5,
       "title": "Margherita Pizza",
-      "description": "A classic pizza topped with fresh tomatoes, mozzarella, and basil..."
+      "description": "A classic pizza topped with fresh tomatoes, mozzarella, and basil...",
+      "image": "images/margherita-pizza.webp"
     }
   ]
   

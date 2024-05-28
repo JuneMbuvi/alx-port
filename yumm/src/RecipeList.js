@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { css, StyleSheet } from 'aphrodite';
 import RecipeCard from './RecipeCard';
+import SearchBar from './SearchBar';
 
 const styles = StyleSheet.create({
   container: {
     padding: '20px',
     display: 'grid',
-    gridTemplateRows: 'repeat(autofill, minmax(300px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
     gap: '20px',
   },
 });
@@ -17,6 +18,7 @@ class RecipeList extends Component {
     super(props);
     this.state = {
       recipes: [],
+      searchTerm: '',
     };
   }
 
@@ -35,12 +37,20 @@ class RecipeList extends Component {
   componentWillUnmount() {
   }
 
+  handleSearchChange = (searchTerm) => {
+    this.setState({ searchTerm });
+  };
+
   render() {
-    const { recipes } = this.state;
+    const { recipes, searchTerm } = this.state;
+    const filteredRecipes = recipes.filter(recipe =>
+      recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
       <div className={css(styles.container)}>
-        {recipes.map(recipe => (
+        <SearchBar searchTerm={searchTerm} onSearchChange={this.handleSearchChange} />
+        {filteredRecipes.map(recipe => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </div>

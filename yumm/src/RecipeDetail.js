@@ -10,6 +10,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   },
+  image: {
+    width: '100%',
+    height: '300px',
+    objectFit: 'cover',
+    borderRadius: '8px',
+    marginBottom: '20px',
+  },
   title: {
     fontSize: '28px',
     fontWeight: 'bold',
@@ -38,6 +45,7 @@ function RecipeDetail({ recipe }) {
   return (
     <div className={css(styles.recipeDetail)}>
       <h2 className={css(styles.title)}>{recipe.title}</h2>
+      <img src={recipe.image} alt={recipe.title} className={css(styles.image)} />
       <p className={css(styles.description)}>{recipe.description}</p>
       <h3>Ingredients:</h3>
       <ul className={css(styles.ingredients)}>
