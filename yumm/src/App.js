@@ -1,27 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import axios from 'axios';
+import RecipeList from './RecipeList';
+import RecipeDetail from './RecipeDetail';
+import CategoryFilter from './CategoryFilter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Yumm</h1>
-        <p>
-          Tasty Delights, a click away.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Yumm
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    recipes: [],
+    selectedRecipe: null,
+    selectedCategory: '',
+    categories: [],
+  };
+
+  componentDidMount() {
+  axios.get('alx-port/yumm/public/recipes.json')
+      .then(response => {
+        const categories = [...new Set(response.data.map(recipe => recipe.category))];
+        this.setState({ recipes: response.data, categories });
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }
+
+  handleCategoryChange = (category) => {
+    this.setState({ selectedCategory: category });
+  };
+
+  handleRecipeSelect = (recipe) => {
+    this.setState({ selectedRecipe: recipe });
+  };
+
+  render() {
+    const { recipes, selectedRecipe, selectedCategory, categories } = this.state;
+    const filteredRecipes = selectedCategory
+      ? recipes.filter(recipe => recipe.category === selectedCategory)
+      : recipes;
+
+    return (
+      <div>
+        <CategoryFilter
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={this.handleCategoryChange}
+        />
+        <RecipeList
+          recipes={filteredRecipes}
+          onSelectRecipe={this.handleRecipeSelect}
+        />
+        <RecipeDetail recipe={selectedRecipe} />
+      </div>
+    );
+  }
 }
 
 export default App;
-

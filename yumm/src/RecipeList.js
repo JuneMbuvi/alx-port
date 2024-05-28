@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { css, StyleSheet } from 'aphrodite';
+import RecipeCard from './RecipeCard';
 
 const styles = StyleSheet.create({
   container: {
     padding: '20px',
-  },
-  recipe: {
-    borderBottom: '1px solid #ccc',
-    paddingBottom: '10px',
-    marginBottom: '10px',
-  },
-  title: {
-    fontSize: '24px',
-    color: '#333',
-  },
-  description: {
-    fontSize: '16px',
-    color: '#666',
   },
 });
 
@@ -30,7 +18,7 @@ class RecipeList extends Component {
   }
 
   componentDidMount() {
-    axios.get('alx-port/yumm/public/recipes.json')
+    axios.get('/recipes.json')
       .then(response => this.setState({ recipes: response.data }))
       .catch(error => console.error('Error fetching data:', error));
   }
@@ -50,10 +38,7 @@ class RecipeList extends Component {
     return (
       <div className={css(styles.container)}>
         {recipes.map(recipe => (
-          <div key={recipe.id} className={css(styles.recipe)}>
-            <h2 className={css(styles.title)}>{recipe.title}</h2>
-            <p className={css(styles.description)}>{recipe.description}</p>
-          </div>
+          <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </div>
     );
