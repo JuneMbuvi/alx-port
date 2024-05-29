@@ -25,7 +25,7 @@
   margin: 0 0 0 10px; 
   } 
   .search-button:hover { 
-  background-color:#fa709a ; 
+  background-color: grey; 
   } 
   .recipes{ 
   display: flex; 
