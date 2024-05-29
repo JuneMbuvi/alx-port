@@ -2,32 +2,31 @@
     {
       "id": 1,
       "title": "Spaghetti Bolognese",
-      "description": "A classic Italian pasta dish...",
-      "image": "images/spaghetti-bolognese.webp"
+      "description": "A classic Italian pasta dish..."
     },
     {
       "id": 2,
       "title": "Chicken Curry",
       "description": "A spicy and flavorful dish...",
-      "image": "images/chicken-curry.webp"
+      "image": "https://imgur.com/gallery/homemade-chicken-curry-qilxvlr"
     },
     {
       "id": 3,
       "title": "Vegetable Stir Fry",
       "description": "A healthy and quick stir-fried vegetable dish...",
-      "image": "images/vegetable-stir-fry.webp"
+      "image": "https://imgur.com/gallery/vegetable-stir-fry-uX7dq"
     },
     {
       "id": 4,
       "title": "Beef Tacos",
       "description": "Delicious Mexican tacos with seasoned beef and toppings...",
-      "image": "images/beef-tacos.webp"
+      "image": "https://imgur.com/gallery/beef-birria-tacos-5IUuLu0"
     },
     {
       "id": 5,
       "title": "Margherita Pizza",
       "description": "A classic pizza topped with fresh tomatoes, mozzarella, and basil...",
-      "image": "images/margherita-pizza.webp"
+      "image": "https://imgur.com/gallery/tasty-pizza-margherita-with-anchovies-YCNnGjz"
     }
   ]
   
